@@ -2,7 +2,6 @@ const nav = document.querySelector(".main-navigation");
 const heroLeaving = document.querySelector(".hero");
 const socialTop = document.querySelector(".header__social-top__contact");
 const logo = document.querySelector(".header__logo");
-const btmThird = document.getElementById("bottom-third");
 
 const heroOptions = {
    threshold: 0,

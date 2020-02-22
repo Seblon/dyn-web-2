@@ -5,24 +5,27 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="assets/css/main.css">
+   <link rel="stylesheet" href="assets/css/font-icons/icofont/icofont.min.css">
    <script src="https://kit.fontawesome.com/1ad77678d0.js" crossorigin="anonymous"></script>
-   <title>UC | University of California</title>
+   <title>Log in to your account | University of California</title>
 </head>
 
 <body>
    <!-- Start container -->
-   <div class="container maintain-bottom-pos">
-      <!-- Start hero -->
-      <section class="hero fullwidth">
-         <div class="hero__content">
-            <div class="hero__content__title--small">School of</div>
-            <div class="hero__content__title--large">Media &<br />Information</div>
-         </div>
-      </section><!-- End of Hero -->
-
+   <div class="container">
       <!-- Start header -->
-      <header>
-         <div class="header__logo">
+      <header class="fixed">
+         <!-- Start navigation -->
+         <nav class="main-navigation nav-is-top">
+            <ul class="nav-list no-bullets">
+               <li class="nav-list-item"><a href="courses.html">Education</a></li>
+               <li class="nav-list-item"><a href="#">Research</a></li>
+               <li class="nav-list-item"><a href="#">About UC</a></li>
+               <li class="nav-list-item active">Student Area <i class="fas fa-sign-in-alt"></i>
+               </li>
+            </ul>
+         </nav><!-- End of navigation -->
+         <div class="header__logo half-width">
             <a href="index.html" class="header__logo__link">
                <svg class="logo-1" data-name="Logo 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 802.73 848.03">
                   <title>logoImage</title>
@@ -116,7 +119,7 @@
             </a>
          </div>
          <div class="header__social-top">
-            <span class="header__social-top__contact"><a href="#">Contact</a></span>
+            <span class="header__social-top__contact"><a href="#" class="inverted__white-to-black">Contact</a></span>
 
             <ul class="header__social-top__list no-bullets">
 
@@ -127,8 +130,7 @@
                   <a href="#"><span class="header__social-top__icon-bg"><i class="fab fa-linkedin-in"></i></span></a>
                </li>
                <li class="header__social-top__list-item">
-                  <a href="#">
-                     <span class="header__social-top__icon-bg">
+                  <a href="#"><span class="header__social-top__icon-bg">
                         <div class="header__social-top__tiktok">
                            <svg class="tiktok__logo" viewBox="0 0 173 200.33">
                               <title>tiktok-logo</title>
@@ -146,312 +148,71 @@
             </ul>
          </div>
       </header><!-- End of header -->
+      <!-- Start breadcrumbs -->
+      <div class="breadcrumbs">
+         <ul class="breadcrumbs__list no-bullets">
+            <li class="breadcrumbs__list-item">
+               <a href="index.html">
+                  <i class="icofont-ui-home"></i>
+               </a>
+            </li>
+            <li class="breadcrumbs__list-item"><a href="">Student</a></li>
+            <li class="breadcrumbs__list-item"><a href="">Student Area Login</a></li>
+         </ul>
+      </div><!-- End of breadcrumbs -->
+      <div class="main-content">
+         <h1 class="main-content__title main-content__title--centered">Student Area Login</h1>
+         <div class="inner-container__narrow">
+            <div class="inner-container__narrow__left">
+               <div class="inner-container__narrow__left__form__wrapper">
 
-      <!-- Start main section -->
-      <main class="negative-y">
+                  <form action="address-to-some-api" method="get" class="inner-container__narrow__left__form">
 
-         <!-- Start search education form -->
-         <form class="search-education">
-            <h2 class="search-education__title">Find Your Education Here:</h2>
-            <div class="search-education__wrapper">
-               <div class="search-education__input-wrapper">
-                  <label for="search-education-input" class="search-education-input__label screen-reader-only">Search
-                     for
-                     an education</label>
-                  <input type="search" class="search-education__input" name="search-education-input"
-                     id="search-education-input" aria-label="Search for an education" value=""
-                     placeholder="Digital designer..." />
+                     <label for="email-input" class="email__input__label">Email:</label>
 
-                  <button type="submit" class="search-education__input__btn">
-                     <i class="fas fa-search"><span class="screen-reader-only">Search now</span></i>
-                  </button>
+                     <input type="text" name="email-input" id="email-input"
+                        class="inner-container__narrow__left__email-input" placeholder="john.doe@student.cu.edu"
+                        required autofocus>
+
+                     <label for="pw-input" class="pw__input__label">Password:</label>
+
+                     <input type="text" name="pw-input" id="pw-input" class="inner-container__narrow__left__pw-input"
+                        placeholder="password" required>
+                     <button type="submit" class="btn btn--red btn--rounded btn--block">Log me in</button>
+                  </form>
                </div>
 
-               <!-- Start search education filter -->
-               <section class="search-education__filter">
-                  <span class="search-education__filter__toggle">
-                     <i class="fas fa-chevron-right"></i> Filter
-                  </span>
-                  <div class="search-education__filter__wrapper">
-                     <label for="search-education-select-1" class="screen-reader-only">Choose level:</label>
-                     <select name="search-education-select-1" id="search-education-select-1"
-                        class="search-education__select">
-                        <option value="">-- Choose level</option>
-                        <option value="Associate">Associate</option>
-                        <option value="Bachelors">Bachelor's</option>
-                        <option value="Masters">Master's</option>
-                        <option value="Doctoral">Doctoral</option>
-                     </select>
-
-                     <label for="search-education-select-2" class="screen-reader-only">Choose subject:</label>
-                     <select name="search-education-select-2" id="search-education-select-2"
-                        class="search-education__select">
-                        <option value="">-- Choose subject</option>
-                        <option value="Informatics">Informatics</option>
-                        <option value="Media">Media</option>
-                        <option value="Design">Design</option>
-                        <option value="Communication">Communication</option>
-                     </select>
-
-                     <label for="search-education-select-3" class="screen-reader-only">Sorting:</label>
-                     <select name="search-education-select-3" id="search-education-select-3"
-                        class="search-education__select">
-                        <option value="">-- Sort by</option>
-                        <option value="Descending">Descending</option>
-                        <option value="Ascending">Ascending</option>
-                     </select>
-                  </div>
-               </section><!-- End of search education filter -->
             </div>
-         </form>
-         <!-- End of search education form -->
+            <div class="inner-container__narrow__middle"></div>
+            <div class="inner-container__narrow__right">
+               <div class="inner-container__narrow__right__desc">
+                  <h3 class="inner-container__narrow__right__desc__title">
+                     Login help
+                  </h3>
+                  <p class="inner-container__narrow__right__desc__text">
+                     Are you having issues logging in? Maybe you <a href="#" class="only-underline">forgot your
+                        password</a> or is this your
+                     first login?</p>
 
-         <!-- Start navigation -->
-         <nav class="main-navigation">
-            <ul class="nav-list no-bullets">
-               <li class="nav-list-item"><a href="courses.html">Education</a></li>
-               <li class="nav-list-item"><a href="#">Research</a></li>
-               <li class="nav-list-item"><a href="#">About UC</a></li>
-               <li class="nav-list-item "><a href="login.html">Student Area <i class="fas fa-sign-in-alt"></i></a></li>
-            </ul>
-         </nav><!-- End of navigation -->
+                  <p class="inner-container__narrow__right__desc__text">
+                     You need to have your activation code prior to your first log in. If you don’t have an activation
+                     code, please <a href="#" class="only-underline">contact the University Help Desk</a>.</p>
 
-         <!-- Start inner container -->
-         <div class="inner-container">
-            <h1 class="main-content__title">Education Latest News</h1>
-
-            <!-- Start inner container cards section -->
-            <section class="inner-container__cards">
-
-               <!-- Start card -->
-               <figure class="card">
-                  <div class="card__image-placeholder">
-                     <a href="#" class="img-link">
-                        <img src="https://source.unsplash.com/collection/9581292?git=1234" class="img--center-cover"
-                           alt="Placeholder image">
-                     </a>
-                     <div class="card__image-placeholder__info">
-                        <ul class="no-bullets card__image-placeholder__info__list">
-                           <li class="card__image-placeholder__info__list-item">Posted in: Admission</li>
-                           <li class="card__image-placeholder__info__list-item">12-01-10</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <figcaption class=" card__desc__full">
-                     <h2 class="card__title"><a href="">Some heading here</a></h2>
-                     <div class="card__desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo repellat,
-                           temporibus
-                           praesentium ratione impedit expedita sunt vitae delectus placeat esse soluta earum
-                           iusto!
-                           Architecto vero magni quidem deleniti minus!</p>
-                     </div>
-                     <a href="#" class="btn btn--rounded btn--red" role="button">Read the full story</a>
-                  </figcaption>
-               </figure><!-- End of card -->
-
-               <!-- Start card -->
-               <figure class="card">
-                  <div class="card__image-placeholder">
-                     <a href="#" class="img-link">
-                        <img src="https://source.unsplash.com/collection/9581292?git=1237" class="img--center-cover"
-                           alt="Placeholder image">
-                     </a>
-                     <div class="card__image-placeholder__info">
-                        <ul class="no-bullets card__image-placeholder__info__list">
-                           <li class="card__image-placeholder__info__list-item">Posted in: Admission</li>
-                           <li class="card__image-placeholder__info__list-item">12-01-10</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <figcaption class=" card__desc__full">
-                     <h2 class="card__title"><a href="">Some heading here</a></h2>
-                     <div class="card__desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo repellat,
-                           temporibus
-                           praesentium ratione impedit expedita sunt vitae delectus placeat esse soluta earum
-                           iusto!
-                           Architecto vero magni quidem deleniti minus!</p>
-                     </div>
-                     <a href="#" class="btn btn--rounded btn--red" role="button">Read the full story</a>
-                  </figcaption>
-               </figure><!-- End of card -->
-
-               <!-- Start card -->
-               <figure class="card">
-                  <div class="card__image-placeholder">
-                     <a href="#" class="img-link">
-                        <img src="https://unsplash.it/1920/1080" class="img--center-cover" alt="Placeholder image">
-                     </a>
-                     <div class="card__image-placeholder__info">
-                        <ul class="no-bullets card__image-placeholder__info__list">
-                           <li class="card__image-placeholder__info__list-item">Posted in: Admission</li>
-                           <li class="card__image-placeholder__info__list-item">12-01-10</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <figcaption class=" card__desc__full">
-                     <h2 class="card__title"><a href="">Some heading here</a></h2>
-                     <div class="card__desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo repellat,
-                           temporibus
-                           praesentium ratione impedit expedita sunt vitae delectus placeat esse soluta earum
-                           iusto!
-                           Architecto vero magni quidem deleniti minus!</p>
-                     </div>
-                     <a href="#" class="btn btn--rounded btn--red" role="button">Read the full story</a>
-                  </figcaption>
-               </figure><!-- End of card -->
-
-               <!-- Start card -->
-               <figure class="card">
-                  <div class="card__image-placeholder">
-                     <a href="#" class="img-link">
-                        <img src="https://unsplash.it/1920/1080" class="img--center-cover" alt="Placeholder image">
-                     </a>
-                     <div class="card__image-placeholder__info">
-                        <ul class="no-bullets card__image-placeholder__info__list">
-                           <li class="card__image-placeholder__info__list-item">Posted in: Admission</li>
-                           <li class="card__image-placeholder__info__list-item">12-01-10</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <figcaption class=" card__desc__full">
-                     <h2 class="card__title"><a href="">Some heading here</a></h2>
-                     <div class="card__desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo repellat,
-                           temporibus
-                           praesentium ratione impedit expedita sunt vitae delectus placeat esse soluta earum
-                           iusto!
-                           Architecto vero magni quidem deleniti minus!</p>
-                     </div>
-                     <a href="#" class="btn btn--rounded btn--red" role="button">Read the full story</a>
-                  </figcaption>
-               </figure><!-- End of card -->
-
-               <!-- Start card -->
-               <figure class="card">
-                  <div class="card__image-placeholder">
-                     <a href="#" class="img-link">
-                        <img src="https://unsplash.it/1920/1080" class="img--center-cover" alt="Placeholder image">
-                     </a>
-                     <div class="card__image-placeholder__info">
-                        <ul class="no-bullets card__image-placeholder__info__list">
-                           <li class="card__image-placeholder__info__list-item">Posted in: Admission</li>
-                           <li class="card__image-placeholder__info__list-item">12-01-10</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <figcaption class=" card__desc__full">
-                     <h2 class="card__title"><a href="">Some heading here</a></h2>
-                     <div class="card__desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo repellat,
-                           temporibus
-                           praesentium ratione impedit expedita sunt vitae delectus placeat esse soluta earum
-                           iusto!
-                           Architecto vero magni quidem deleniti minus!</p>
-                     </div>
-                     <a href="#" class="btn btn--rounded btn--red" role="button">Read the full story</a>
-                  </figcaption>
-               </figure><!-- End of card -->
-
-               <!-- Start card -->
-               <figure class="card">
-                  <div class="card__image-placeholder">
-                     <a href="#" class="img-link">
-                        <img src="https://unsplash.it/1920/1080" class="img--center-cover" alt="Placeholder image">
-                     </a>
-                     <div class="card__image-placeholder__info">
-                        <ul class="no-bullets card__image-placeholder__info__list">
-                           <li class="card__image-placeholder__info__list-item">Posted in: Admission</li>
-                           <li class="card__image-placeholder__info__list-item">12-01-10</li>
-                        </ul>
-                     </div>
-                  </div>
-                  <figcaption class=" card__desc__full">
-                     <h2 class="card__title"><a href="">Some heading here</a></h2>
-                     <div class="card__desc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quo repellat,
-                           temporibus
-                           praesentium ratione impedit expedita sunt vitae delectus placeat esse soluta earum
-                           iusto!
-                           Architecto vero magni quidem deleniti minus!</p>
-                     </div>
-                     <a href="#" class="btn btn--rounded btn--red" role="button">Read the full story</a>
-                  </figcaption>
-               </figure><!-- End of card -->
-
-            </section><!-- End of inner container cards section -->
-         </div><!-- End of inner container -->
-
-         <!-- Start feature articles -->
-         <div class="feature-articles">
-
-            <!-- Start feature article -->
-            <div class="feature-article m-top--large">
-               <img src="https://unsplash.it/1920/1080" class="feature-article__image" alt="Placeholder image">
-               <div class="feature-article__info-box">
-                  <h1 class="feature-article__info-box__title">Life in California</h1>
-                  <h3 class="feature-article__info-box__subtitle">Come experience true freedom!</h3>
-                  <p class="feature-article__info-box__desc">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis vero magni fugiat
-                     pariatur explicabo rem soluta assumenda similique repellat, maxime error? Consectetur hic
-                     accusantium animi totam! Et, quam repellat?
-                  </p>
-                  <a href="#"><span class="feature-article__info-box__link">
-                        Find out more about this place now!
-                     </span></a>
+                  <h4>Open Hours</h4>
+                  <p>Mo - Fri: 8.00 am - 3.00 pm.</p>
                </div>
-            </div><!-- End feature article -->
-
-            <!-- Start feature article -->
-            <div class="feature-article">
-               <img src="https://unsplash.it/1920/1080" class="feature-article__image" alt="Placeholder image">
-               <div class="feature-article__info-box feature-article__info-box--left">
-                  <h1 class="feature-article__info-box__title">Life in California</h1>
-                  <h3 class="feature-article__info-box__subtitle">Come experience true freedom!</h3>
-                  <p class="feature-article__info-box__desc">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis vero magni fugiat
-                     pariatur explicabo rem soluta assumenda similique repellat, maxime error? Consectetur hic
-                     accusantium animi totam! Et, quam repellat?
-                  </p>
-                  <a href="#"><span class="feature-article__info-box__link">
-                        Find out more about this place now!
-                     </span></a>
-               </div>
-            </div><!-- End feature article -->
-
-            <!-- Start feature article -->
-            <div class="feature-article">
-               <img src="https://unsplash.it/1920/1080" class="feature-article__image" alt="Placeholder image">
-               <div class="feature-article__info-box last">
-                  <h1 class="feature-article__info-box__title">Life in California</h1>
-                  <h3 class="feature-article__info-box__subtitle">Come experience true freedom!</h3>
-                  <p class="feature-article__info-box__desc">
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis vero magni fugiat
-                     pariatur explicabo rem soluta assumenda similique repellat, maxime error? Consectetur hic
-                     accusantium animi totam! Et, quam repellat?
-                  </p>
-                  <a href="#"><span class="feature-article__info-box__link">
-                        Find out more about this place now!
-                     </span></a>
-               </div>
-            </div><!-- End feature article -->
-
-         </div><!-- End feature articles -->
-      </main><!-- End of main -->
-   </div><!-- End of container -->
+            </div>
+         </div>
+      </div>
+   </div>
 
    <!-- Start footer -->
    <footer class="maintain-bottom-pos">
-
       <!-- Start container -->
       <div class="container">
-
          <!-- Start footer top -->
          <div class="footer__top">
-
-            <!-- Start footer top left -->
+            <!-- Start footer left -->
             <div class="footer__top__left">
                <div class="footer__top__left__logo">
                   <svg class="logo-2" data-name="Logo 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 802.73 848.03">
@@ -552,9 +313,9 @@
                   <p class="school-address">2130 Fulton Street<br />
                      San Francisco, CA 94117-1080</p>
                </div>
-            </div><!-- End footer top left -->
+            </div><!-- End of footer left -->
 
-            <!-- Start footer top right -->
+            <!-- Start footer right -->
             <div class="footer__top__right">
                <div class="footer__top__right__social-icons">
                   <ul class="footer__top__right__social-icons__list no-bullets">
@@ -576,19 +337,30 @@
                         <a href="#"><span class="social-icons-list__icon-bg"><i class="fab fa-instagram"></i></span></a>
                      </li>
                      <li class="footer__top__right__social-icons__list-item">
-                        <a href="#"><span class="header__social-top__icon-bg"><img class="header__social-top__tiktok"
-                                 src="assets/images/tiktok-icon.svg" alt=""></span></a>
+                        <a href="#">
+                           <span class="social-icons-list__icon-bg">
+                              <div class="social-icons-list__icon-bg__tiktok">
+                                 <svg class="tiktok__logo" viewBox="0 0 173 200.33">
+                                    <title>tiktok-logo</title>
+                                    <g class="g-tiktok-logo" data-name="TikTok Logo">
+                                       <path
+                                          d="M498.5,359.17h-35V495.5a29,29,0,1,1-20.86-27.83V432A64,64,0,1,0,434.5,559.5a64,64,0,0,0,64-64V425.11a79.53,79.53,0,0,0,45,13.89V404A45.06,45.06,0,0,1,498.5,359.17Z"
+                                          transform="translate(-370.5 -359.17)" />
+                                    </g>
+                                 </svg>
+                              </div>
+                           </span>
+                        </a>
                      </li>
                   </ul>
                </div>
-            </div><!-- End footer top right -->
-         </div><!-- End footer top -->
+            </div><!-- End of footer top -->
+         </div><!-- End of footer top -->
 
          <hr class="footer-hr">
 
          <!-- Start footer bottom -->
          <div class="footer__bottom">
-
             <!-- Start footer bottom left -->
             <div class="footer__bottom__left">
                <div class="footer__bottom__left__menu">
@@ -614,7 +386,7 @@
                </div>
             </div><!-- End footer bottom left -->
 
-            <!-- Start footer bottom right -->
+            <!-- start footer bottom right -->
             <div class="footer__bottom__right">
                <div class="footer__bottom__text">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corporis vero magni fugiat
@@ -626,12 +398,11 @@
             </div><!-- End footer bottom right -->
          </div><!-- End footer bottom -->
       </div><!-- End of container -->
-   </footer><!-- End of container -->
+   </footer><!-- End of footer -->
 
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
    <script src="assets/scripts/jquery.js"></script>
-   <script src="assets/scripts/intersectionObserver.js"></script>
 </body>
 
 </html>
