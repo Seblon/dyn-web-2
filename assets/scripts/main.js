@@ -6,9 +6,9 @@ $(document).ready(function() {
       $.each(courses, function(i, value) {
          let teachers = value.teachers;
 
-         let randomImg = 1 + Math.floor(Math.random() * 100);
+         let randomNbr = 1 + Math.floor(Math.random() * 100);
 
-         let img = `https://source.unsplash.com/collection/9581292/${randomImg}`;
+         let img = `https://source.unsplash.com/collection/9581292/${randomNbr}`;
 
          $(".courses__inner-container").append(
             $(`
@@ -58,6 +58,39 @@ $(document).ready(function() {
       });
    });
 
+   // LOGIN VALIDATION
+   let emailInput = document.getElementById("email-input");
+   let pwInput = document.getElementById("pw-input");
+   let submitBtn = document.getElementById("login-submit");
+
+   $(submitBtn).click(function(e) {
+      // validateForm();
+      checkCred();
+      e.preventDefault();
+   });
+
+   let studentsUrl =
+      "http://webbred2.utb.hb.se/~fewe/api/api.php?data=students";
+
+   function checkCred() {
+      $.get(studentsUrl, function(students) {
+         $.each(students, function(i, data) {
+            if (
+               data.email == emailInput.value &&
+               data.login.password == pwInput.value
+            ) {
+               console.log("Logged in!");
+               document.location.href = "welcome.html";
+
+               return false;
+            } else {
+               console.log("Try again!");
+            }
+         });
+      });
+   }
+
+   // SHOW / HIDE SEARCH FILTER HOMEPAGE
    $(".search-education__filter__toggle i").click(function() {
       $(this).toggleClass("open");
       $(".search-education__filter__wrapper").slideToggle(".visible");

@@ -1,6 +1,6 @@
 const nav = document.querySelector(".main-navigation");
 const heroLeaving = document.querySelector(".hero");
-const socialTop = document.querySelector(".header__social-top__contact");
+const socialTop = document.querySelector(".header__social-top__contact a");
 const logo = document.querySelector(".header__logo");
 
 const heroOptions = {

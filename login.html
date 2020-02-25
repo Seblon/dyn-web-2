@@ -166,19 +166,22 @@
             <div class="inner-container__narrow__left">
                <div class="inner-container__narrow__left__form__wrapper">
 
-                  <form action="address-to-some-api" method="get" class="inner-container__narrow__left__form">
+                  <form method="get" id="login-form" class="inner-container__narrow__left__form">
 
                      <label for="email-input" class="email__input__label">Email:</label>
 
                      <input type="text" name="email-input" id="email-input"
                         class="inner-container__narrow__left__email-input" placeholder="john.doe@student.cu.edu"
-                        required autofocus>
+                        required autofocus autocomplete="off">
 
                      <label for="pw-input" class="pw__input__label">Password:</label>
 
                      <input type="text" name="pw-input" id="pw-input" class="inner-container__narrow__left__pw-input"
                         placeholder="password" required>
-                     <button type="submit" class="btn btn--red btn--rounded btn--block">Log me in</button>
+
+                     <button action="index.html" type="submit" id="login-submit"
+                        class="btn btn--red btn--rounded btn--block">Log me
+                        in</button>
                   </form>
                </div>
 
@@ -402,7 +405,7 @@
 
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-   <script src="assets/scripts/jquery.js"></script>
+   <script src="assets/scripts/main.js"></script>
 </body>
 
 </html>
