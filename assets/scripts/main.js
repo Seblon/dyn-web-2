@@ -13,8 +13,8 @@ $(document).ready(function() {
          $(".courses__inner-container").append(
             $(`
             <article class="course__article">
-            <div class="course__article__img-wrapper cover-image">
-            <img src="${img}" class="cover" alt="Sample image">               
+            <div class="course__article__img-wrapper">
+            <img src="${img}" class="img--center-cover" alt="Sample image">               
             </div>
             <div class="course__article__desc__wrapper">
                <h2 class="course__article__title"> ${value.courseName} </h2>
@@ -80,10 +80,15 @@ $(document).ready(function() {
                data.login.password == pwInput.value
             ) {
                console.log("Logged in!");
-               document.location.href = "welcome.html";
+               document.location.href = "courses.html";
 
                return false;
             } else {
+               $(".login-error-message")
+                  .removeClass("invisible")
+                  .html(
+                     "Ooops, it looks like you made a typo there. Please, try again!"
+                  );
                console.log("Try again!");
             }
          });

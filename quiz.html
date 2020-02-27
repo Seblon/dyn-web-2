@@ -7,7 +7,7 @@
    <link rel="stylesheet" href="assets/css/main.css">
    <link rel="stylesheet" href="assets/css/font-icons/icofont/icofont.min.css">
    <script src="https://kit.fontawesome.com/1ad77678d0.js" crossorigin="anonymous"></script>
-   <title>Your account | University of California</title>
+   <title>Take a quiz moment | University of California</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                <li class="nav-list-item"><a href="courses.html">Education</a></li>
                <li class="nav-list-item"><a href="#">Research</a></li>
                <li class="nav-list-item"><a href="#">About UC</a></li>
-               <li class="nav-list-item active">Student Area <i class="fas fa-sign-in-alt"></i>
+               <li class="nav-list-item"><a href="login.html">Student Area <i class="fas fa-sign-in-alt"></i></a>
                </li>
             </ul>
          </nav><!-- End of navigation -->
@@ -156,21 +156,21 @@
                   <i class="icofont-ui-home"></i>
                </a>
             </li>
-            <li class="breadcrumbs__list-item"><a href="">Student</a></li>
-            <li class="breadcrumbs__list-item"><a href="">My account</a></li>
+            <li class="breadcrumbs__list-item"><a href="">Education</a></li>
+            <li class="breadcrumbs__list-item"><a href="">Quiz Test</a></li>
          </ul>
       </div><!-- End of breadcrumbs -->
-      <div class="main-content wide">
-         <h1 class="main-content__title main-content__title--centered">Welcome!</h1>
-         <div class="inner-container">
-            <h4 class="inner-container__subtitle">Content Details</h4>
-            <ul class="inner-container__list">
-               <li class="inner-container__list-item">View credits</li>
-               <li class="inner-container__list-item">View finished courses</li>
-               <li class="inner-container__list-item">View coming courses</li>
-               <li class="inner-container__list-item">Edit my profile</li>
-            </ul>
+      <div class="main-content">
+
+         <h3>UC Quiz</h3>
+         <div class="quiz-container">
+            <form class="quiz-form">
+               <!-- Content will be dynamically fetched to here -->
+            </form>
          </div>
+         <button id="next" class="btn btn--rounded btn--red btn--block btn--max-width m-top--small">Next
+            question</button>
+
       </div>
    </div>
 
@@ -370,7 +370,7 @@
 
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-   <script src="assets/scripts/main.js"></script>
+   <script src="assets/scripts/quiz.js"></script>
 </body>
 
 </html>

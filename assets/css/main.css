@@ -69,11 +69,6 @@ img {
    object-position: center;
 }
 
-.cover {
-   object-fit: cover;
-   object-position: center;
-}
-
 /******* General styling *******/
 
 h1 {
@@ -170,6 +165,12 @@ a {
 }
 
 /* Custom extra margins */
+.m-top--small {
+   margin-top: 2rem;
+}
+.m-top--medium {
+   margin-top: 4rem;
+}
 .m-top--large {
    margin-top: 8rem;
 }
@@ -603,13 +604,15 @@ main {
    margin-top: 1rem;
 }
 
-.form-error {
-   display: block;
-   position: absolute;
-   top: -1rem;
-   right: 0;
+.login-error-message {
+   background-color: pink;
+   margin-top: 1rem;
    padding: 1rem;
-   color: red;
+   color: #272727;
+}
+
+.login-error-message.invisible {
+   display: none;
 }
 
 .inner-container__narrow__left__email-input,
@@ -682,6 +685,8 @@ main {
    width: 33.33%;
    margin-right: 2rem;
    padding: 0;
+   max-height: 20rem;
+   overflow: hidden;
 }
 
 .course__article__desc__wrapper {
@@ -868,6 +873,32 @@ main {
    margin: 2rem 4rem 1rem;
    background-color: var(--offBlack);
    text-align: center;
+}
+
+.quiz-form {
+   display: flex;
+   flex-direction: column;
+   padding: 2rem;
+}
+
+.quiz-question {
+   margin-top: 1rem;
+   margin-bottom: 1.5rem;
+   font-size: 1.2rem;
+}
+
+.radio-response {
+   display: inline-block;
+   margin: 0.5rem 0;
+}
+
+.radio-response-label {
+   display: inline-block;
+   margin-left: 1rem;
+}
+
+.border-container {
+   display: flex;
 }
 
 /* Start footer styles */
