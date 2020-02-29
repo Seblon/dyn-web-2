@@ -1,8 +1,10 @@
 $(document).ready(function() {
+   // SPARA DEN LÅNGA URL:EN I EN VARIABEL
    const coursesUrl =
       "http://webbred2.utb.hb.se/~fewe/api/api.php?data=courses";
 
    $.getJSON(coursesUrl, function(courses) {
+      // LOOPA IGENOM ARRAYEN
       $.each(courses, function(i, value) {
          let teachers = value.teachers;
 
@@ -10,7 +12,9 @@ $(document).ready(function() {
 
          let img = `https://source.unsplash.com/collection/9581292/${randomNbr}`;
 
+         // APPEND HTML FÖR VARJE KURS
          $(".courses__inner-container").append(
+            // MED "TEMPLATE LITERALS" SLIPPER JAG KONKATENERA + ' ' + 'osv...' +
             $(`
             <article class="course__article">
             <div class="course__article__img-wrapper">
@@ -64,7 +68,6 @@ $(document).ready(function() {
    let submitBtn = document.getElementById("login-submit");
 
    $(submitBtn).click(function(e) {
-      // validateForm();
       checkCred();
       e.preventDefault();
    });
