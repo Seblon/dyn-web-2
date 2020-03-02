@@ -76,17 +76,21 @@ $(document).ready(function() {
       "http://webbred2.utb.hb.se/~fewe/api/api.php?data=students";
 
    function checkCred() {
+      // HÄMTA API VIA AJAX
       $.get(studentsUrl, function(students) {
          $.each(students, function(i, data) {
             if (
+               // OM ANGIVEN DATA ÖVERENSSTÄMMER MED DATAN FRÅN API
                data.email == emailInput.value &&
                data.login.password == pwInput.value
             ) {
+               // SKICKA VIDARE TILL FÖLJANDE URL OCH SKRIV UT I CONSOLE
                console.log("Logged in!");
                document.location.href = "courses.html";
 
                return false;
             } else {
+               // ANNARS VISA FELMEDDELANDE SAMT SKRIV UT TILL CONSOLE
                $(".login-error-message")
                   .removeClass("invisible")
                   .html(

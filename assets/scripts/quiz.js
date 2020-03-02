@@ -42,7 +42,7 @@ $(document).ready(function() {
       });
    }
 
-   // USING EVENT DELEGATION FOR CLICK BECAUSE THE CONTENT ISN'T AVAILABLE IN DOM
+   // USING EVENT DELEGATION FOR CLICK BECAUSE THE CONTENT ISN'T AVAILABLE IN DOM ON PAGE LOAD
    $(".quiz-container").on("click", ".radio-response", function() {
       if ($(".corr").is(":checked")) {
          $(this)
